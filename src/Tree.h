@@ -8,18 +8,17 @@
 #ifndef TREE_H_
 #define TREE_H_
 
-#include "node.h"
+#include "Node.h"
 
 class Tree {
 
 private:
-	Tree* _root;
+	Node* _root;
 
 public:
-	Tree();
-	Tree(Tree* root);
+	Tree(Node* root);
 	void traverse();
-	void traverse(Node* child);
+	void traverse(Node* node);
 	virtual ~Tree();
 };
 

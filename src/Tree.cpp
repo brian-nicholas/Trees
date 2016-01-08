@@ -9,19 +9,23 @@
 #include <iostream>
 using namespace std;
 
-Tree::Tree(Tree* root): _root(root) {
+Tree::Tree(Node* root): _root(root) {
 	// TODO Auto-generated constructor stub
 
 }
 
-void Tree::traverse(Node* child) {
-	cout << child -> _name << endl;
-	Node* i = child -> _firstChild;
+void Tree::traverse(Node* node) {
+	cout << node -> _name << endl;
+	Node* i = node -> _firstChild;
 	while(i != NULL)
 	{
 		traverse(i);
 		i = i -> _next;
 	}
+}
+
+void Tree::traverse(){
+
 }
 
 Tree::~Tree() {
