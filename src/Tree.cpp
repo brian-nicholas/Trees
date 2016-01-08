@@ -15,6 +15,11 @@ Tree::Tree(Node* root): _root(root) {
 }
 
 void Tree::traverse(Node* node) {
+
+	for(int i = 0; i < node -> _depth; i++)
+	{
+		cout << "\t";
+	}
 	cout << node -> _name << endl;
 	Node* i = node -> _firstChild;
 	while(i != NULL)
@@ -25,7 +30,7 @@ void Tree::traverse(Node* node) {
 }
 
 void Tree::traverse(){
-
+	traverse(_root);
 }
 
 Tree::~Tree() {

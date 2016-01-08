@@ -7,17 +7,18 @@
 
 #include "Node.h"
 
-Node::Node(string name): _name(name), _firstChild(NULL), _lastChild(NULL), _next(NULL) {
-	// TODO Auto-generated constructor stub
+Node::Node(string name): _name(name), _firstChild(NULL), _lastChild(NULL), _next(NULL), _depth(0)
+{
 
 }
 
 Node::~Node() {
-	// TODO Auto-generated destructor stub
+
 }
 
 void Node::addChild(Node* child) {
 
+	child -> _depth = _depth + 1;
 	if(_firstChild == NULL) { //list is empty
 			_firstChild = child;
 			_lastChild = child;

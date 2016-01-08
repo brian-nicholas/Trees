@@ -17,6 +17,7 @@ private:
 	Node* _firstChild;
 	Node* _lastChild;
 	Node* _next;
+	int _depth;
 
 
 public:
